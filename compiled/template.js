@@ -18,7 +18,7 @@ module.exports = function () {
         [h(
           'a',
           { 'class': theme.link,
-            attrs: { href: 'javascript:void(0);',
+            attrs: { target: '_self',
               disabled: this.page === 1
             },
             on: {
@@ -35,7 +35,7 @@ module.exports = function () {
         [h(
           'a',
           { 'class': theme.link,
-            attrs: { href: 'javascript:void(0);',
+            attrs: { target: '_self',
               disabled: this.page === this.totalPages
             },
             on: {
@@ -55,7 +55,7 @@ module.exports = function () {
         [h(
           'a',
           { 'class': theme.link,
-            attrs: { href: 'javascript:void(0);',
+            attrs: { target: '_self',
               disabled: !!this.allowedChunkClass(-1)
             },
             on: {
@@ -72,7 +72,7 @@ module.exports = function () {
         [h(
           'a',
           { 'class': theme.link,
-            attrs: { href: 'javascript:void(0);',
+            attrs: { target: '_self',
               disabled: !!this.allowedChunkClass(1)
             },
             on: {
@@ -91,8 +91,8 @@ module.exports = function () {
         [h(
           'a',
           { 'class': theme.link + ' ' + this.activeClass(page),
-            attrs: { href: 'javascript:void(0)',
-              role: 'button'
+            attrs: { role: 'button',
+              target: '_self'
             },
             on: {
               'click': this.setPage.bind(this, page)
@@ -124,7 +124,7 @@ module.exports = function () {
             [h(
               'a',
               { 'class': theme.link,
-                attrs: { href: 'javascript:void(0);',
+                attrs: { target: '_self',
                   disabled: !!this.allowedPageClass(this.page - 1)
                 },
                 on: {
@@ -139,7 +139,7 @@ module.exports = function () {
             [h(
               'a',
               { 'class': theme.link,
-                attrs: { href: 'javascript:void(0);',
+                attrs: { target: '_self',
                   disabled: !!this.allowedPageClass(this.page + 1)
                 },
                 on: {
