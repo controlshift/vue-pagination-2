@@ -18,7 +18,8 @@ module.exports = function () {
         [h(
           'a',
           { 'class': theme.link,
-            attrs: { disabled: this.page === 1
+            attrs: { target: '_self',
+              disabled: this.page === 1
             },
             on: {
               'click': this.setPage.bind(this, 1)
@@ -34,7 +35,8 @@ module.exports = function () {
         [h(
           'a',
           { 'class': theme.link,
-            attrs: { disabled: this.page === this.totalPages
+            attrs: { target: '_self',
+              disabled: this.page === this.totalPages
             },
             on: {
               'click': this.setPage.bind(this, this.totalPages)
@@ -53,7 +55,8 @@ module.exports = function () {
         [h(
           'a',
           { 'class': theme.link,
-            attrs: { disabled: !!this.allowedChunkClass(-1)
+            attrs: { target: '_self',
+              disabled: !!this.allowedChunkClass(-1)
             },
             on: {
               'click': this.setChunk.bind(this, -1)
@@ -69,7 +72,8 @@ module.exports = function () {
         [h(
           'a',
           { 'class': theme.link,
-            attrs: { disabled: !!this.allowedChunkClass(1)
+            attrs: { target: '_self',
+              disabled: !!this.allowedChunkClass(1)
             },
             on: {
               'click': this.setChunk.bind(this, 1)
@@ -120,7 +124,8 @@ module.exports = function () {
             [h(
               'a',
               { 'class': theme.link,
-                attrs: { disabled: !!this.allowedPageClass(this.page - 1)
+                attrs: { target: '_self',
+                  disabled: !!this.allowedPageClass(this.page - 1)
                 },
                 on: {
                   'click': this.prev.bind(this)
@@ -134,7 +139,8 @@ module.exports = function () {
             [h(
               'a',
               { 'class': theme.link,
-                attrs: { disabled: !!this.allowedPageClass(this.page + 1)
+                attrs: { target: '_self',
+                  disabled: !!this.allowedPageClass(this.page + 1)
                 },
                 on: {
                   'click': this.next.bind(this)
