@@ -87,7 +87,8 @@ module.exports = function () {
         [h(
           'a',
           { 'class': theme.link + ' ' + this.activeClass(page),
-            attrs: { role: 'button'
+            attrs: { role: 'button',
+              target: '_self'
             },
             on: {
               'click': this.setPage.bind(this, page)

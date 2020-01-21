@@ -44,6 +44,7 @@ module.exports = function() {
         <li class={`VuePagination__pagination-item ${theme.item} ${this.activeClass(page)}`}>
         <a class={`${theme.link} ${this.activeClass(page)}`}
         role="button"
+        target="_self"
         on-click={this.setPage.bind(this, page)}>{page}</a>
         </li>
       )
