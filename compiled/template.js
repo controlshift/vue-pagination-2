@@ -18,8 +18,7 @@ module.exports = function () {
         [h(
           'a',
           { 'class': theme.link,
-            attrs: { href: 'javascript:void(0);',
-              disabled: this.page === 1
+            attrs: { disabled: this.page === 1
             },
             on: {
               'click': this.setPage.bind(this, 1)
@@ -35,8 +34,7 @@ module.exports = function () {
         [h(
           'a',
           { 'class': theme.link,
-            attrs: { href: 'javascript:void(0);',
-              disabled: this.page === this.totalPages
+            attrs: { disabled: this.page === this.totalPages
             },
             on: {
               'click': this.setPage.bind(this, this.totalPages)
@@ -55,8 +53,7 @@ module.exports = function () {
         [h(
           'a',
           { 'class': theme.link,
-            attrs: { href: 'javascript:void(0);',
-              disabled: !!this.allowedChunkClass(-1)
+            attrs: { disabled: !!this.allowedChunkClass(-1)
             },
             on: {
               'click': this.setChunk.bind(this, -1)
@@ -72,8 +69,7 @@ module.exports = function () {
         [h(
           'a',
           { 'class': theme.link,
-            attrs: { href: 'javascript:void(0);',
-              disabled: !!this.allowedChunkClass(1)
+            attrs: { disabled: !!this.allowedChunkClass(1)
             },
             on: {
               'click': this.setChunk.bind(this, 1)
@@ -91,8 +87,7 @@ module.exports = function () {
         [h(
           'a',
           { 'class': theme.link + ' ' + this.activeClass(page),
-            attrs: { href: 'javascript:void(0)',
-              role: 'button'
+            attrs: { role: 'button'
             },
             on: {
               'click': this.setPage.bind(this, page)
@@ -124,8 +119,7 @@ module.exports = function () {
             [h(
               'a',
               { 'class': theme.link,
-                attrs: { href: 'javascript:void(0);',
-                  disabled: !!this.allowedPageClass(this.page - 1)
+                attrs: { disabled: !!this.allowedPageClass(this.page - 1)
                 },
                 on: {
                   'click': this.prev.bind(this)
@@ -139,8 +133,7 @@ module.exports = function () {
             [h(
               'a',
               { 'class': theme.link,
-                attrs: { href: 'javascript:void(0);',
-                  disabled: !!this.allowedPageClass(this.page + 1)
+                attrs: { disabled: !!this.allowedPageClass(this.page + 1)
                 },
                 on: {
                   'click': this.next.bind(this)
